@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defense Ticket PDF Generator</title>
+</head>
+<body>
+    <h2>Generate PDF for Confirmed Tickets</h2>
+    <form action="/generate_pdf" method="POST" enctype="multipart/form-data">
+        <!-- Upload Ticket Screenshot -->
+        <label for="ticket">Upload Ticket Screenshot:</label><br>
+        <input 
+            type="file" 
+            id="ticket" 
+            name="ticket" 
+            title="Upload a screenshot of your ticket" 
+            required><br><br>
+    
+        <!-- Upload ECHS Card -->
+        <label for="card">Upload ECHS Card:</label><br>
+        <input 
+            type="file" 
+            id="card" 
+            name="card" 
+            title="Upload a screenshot of your ECHS card" 
+            required><br><br>
+    
+        <!-- Custom Message -->
+        <label for="message">Custom Message:</label><br>
+        <textarea 
+            id="message" 
+            name="message" 
+            rows="5" 
+            cols="40" 
+            title="Enter a custom message to include in the PDF" 
+            placeholder="Enter details like name, PNR, etc." 
+            required></textarea><br><br>
+    
+        <!-- Submit Button -->
+        <button type="submit">Generate PDF</button>
+    </form>
+    
+</body>
+</html>
